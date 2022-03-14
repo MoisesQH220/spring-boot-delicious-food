@@ -28,6 +28,6 @@ public class UserRequest implements Serializable {
   private String category;
   
   @ApiModelProperty(value = "Geographical user information", position = 4)
-  private GeographicalRequest geographicalRequest;
+  private GeographicalRequest geoInfo;
   
 }

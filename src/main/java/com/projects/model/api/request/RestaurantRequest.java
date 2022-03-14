@@ -18,16 +18,19 @@ public class RestaurantRequest implements Serializable {
   
   private static final long serialVersionUID = -2489850791495320L;
   
-  @ApiModelProperty(value = "Full owner name", example = "Mariano Jose Vásquez Solano", position = 1)
+  @ApiModelProperty(value = "Restaurant name", example = "Demon Sandwich", position = 1)
+  private String name;
+  
+  @ApiModelProperty(value = "Full owner name", example = "Mariano Jose Vásquez Solano", position = 2)
   private String ownerName;
   
-  @ApiModelProperty(value = "Owner cellphone", example = "987451681", position = 2)
+  @ApiModelProperty(value = "Owner cellphone", example = "987451681", position = 3)
   private String cellphone;
   
-  @ApiModelProperty(value = "Restaurant category", example = "Fast Food", position = 3)
+  @ApiModelProperty(value = "Restaurant category", example = "Fast Food", position = 4)
   private String category;
   
-  @ApiModelProperty(value = "Geographical restaurant information", position = 4)
-  private GeographicalRequest geographicalRequest;
+  @ApiModelProperty(value = "Geographical restaurant information", position = 5)
+  private GeographicalRequest geoInfo;
   
 }

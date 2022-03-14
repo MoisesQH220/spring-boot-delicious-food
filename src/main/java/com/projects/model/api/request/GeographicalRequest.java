@@ -29,6 +29,6 @@ public class GeographicalRequest implements Serializable {
   private String state;
   
   @ApiModelProperty(value = "Zip code", example = "15809", position = 4)
-  private String zip_code;
+  private String zipCode;
   
 }

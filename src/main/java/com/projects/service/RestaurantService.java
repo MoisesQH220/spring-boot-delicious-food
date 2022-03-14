@@ -1,9 +1,14 @@
 package com.projects.service;
 
+import com.projects.model.api.request.RestaurantRequest;
 import com.projects.model.api.response.RestaurantResponse;
+
+import java.util.List;
 
 public interface RestaurantService {
   
-  RestaurantResponse findByCategory(String category);
+  List<RestaurantResponse> findByCategory(String category);
+  
+  RestaurantResponse createRestaurant(RestaurantRequest restaurantRequest);
   
 }

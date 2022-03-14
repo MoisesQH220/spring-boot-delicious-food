@@ -47,7 +47,7 @@ public class GeoInfo implements Serializable {
   private String state;
   
   @Column(name = "zip_code")
-  private String zip_code;
+  private String zipCode;
   
   @Column(name = "date_create")
   private Date dateCreate;
