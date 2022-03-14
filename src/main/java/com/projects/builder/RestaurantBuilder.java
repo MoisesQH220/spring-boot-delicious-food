@@ -6,6 +6,7 @@ import com.projects.model.entity.GeoInfo;
 import com.projects.model.entity.Restaurant;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -41,7 +42,9 @@ public class RestaurantBuilder {
         .city(Objects.nonNull(restaurantRequest.getGeoInfo()) ? restaurantRequest.getGeoInfo().getCity() : null)
         .state(Objects.nonNull(restaurantRequest.getGeoInfo()) ? restaurantRequest.getGeoInfo().getState() : null)
         .zipCode(Objects.nonNull(restaurantRequest.getGeoInfo()) ? restaurantRequest.getGeoInfo().getZipCode() : null)
+        .dateCreate(new Date())
         .build())
+      .dateCreate(new Date())
       .build();
   }
 }

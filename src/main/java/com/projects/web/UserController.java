@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 import static com.projects.util.Constants.GET;
-import static com.projects.util.Constants.GET_RESTAURANT_CATEGORY;
+import static com.projects.util.Constants.GET_USER_CATEGORY;
+import static com.projects.util.Constants.POST;
+import static com.projects.util.Constants.POST_USER;
 import static com.projects.util.Constants.US_TAG_DESC;
 import static com.projects.util.Constants.US_TAG_NAME;
-import static com.projects.util.Constants.POST;
-import static com.projects.util.Constants.POST_RESTAURANT;
 
 @RestController
 @RequestMapping("api/v1.0/users")
@@ -39,14 +39,14 @@ public class UserController {
   
   @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
     produces = {MediaType.APPLICATION_STREAM_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE})
-  @ApiOperation(value = POST_RESTAURANT, response = UserResponse.class, httpMethod = POST)
+  @ApiOperation(value = POST_USER, response = UserResponse.class, httpMethod = POST)
   public UserResponse postRestaurant(@RequestBody UserRequest userRequest) {
     return userService.createUser(userRequest);
   }
   
   @GetMapping(value = "/{category}",
     produces = {MediaType.APPLICATION_STREAM_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE})
-  @ApiOperation(value = GET_RESTAURANT_CATEGORY, response = UserResponse.class, httpMethod = GET)
+  @ApiOperation(value = GET_USER_CATEGORY, response = UserResponse.class, httpMethod = GET)
   public List<UserResponse> getRestaurantByCategory(@PathVariable(value = "category") String category) {
     return userService.findByCategory(category);
   }

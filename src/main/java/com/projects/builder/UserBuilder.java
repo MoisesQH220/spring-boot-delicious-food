@@ -6,6 +6,7 @@ import com.projects.model.entity.GeoInfo;
 import com.projects.model.entity.User;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -39,7 +40,9 @@ public class UserBuilder {
         .city(Objects.nonNull(userRequest.getGeoInfo()) ? userRequest.getGeoInfo().getCity() : null)
         .state(Objects.nonNull(userRequest.getGeoInfo()) ? userRequest.getGeoInfo().getState() : null)
         .zipCode(Objects.nonNull(userRequest.getGeoInfo()) ? userRequest.getGeoInfo().getZipCode() : null)
+        .dateCreate(new Date())
         .build())
+      .dateCreate(new Date())
       .build();
   }
 }

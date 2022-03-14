@@ -1,6 +1,5 @@
 package com.projects.model.entity;
 
-import com.projects.model.enums.VehicleType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -33,7 +32,7 @@ public class Vehicle implements Serializable {
   private Integer id;
   
   @Column(name = "type", nullable = false)
-  private VehicleType type;
+  private String type;
   
   @Column(name = "make", nullable = false)
   private String make;
