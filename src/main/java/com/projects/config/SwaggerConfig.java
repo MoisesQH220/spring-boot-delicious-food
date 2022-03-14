@@ -15,10 +15,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
   
-  private final InfoProperties properties;
+  private final InfoProperties infoProperties;
   
-  public SwaggerConfig(InfoProperties properties) {
-    this.properties = properties;
+  public SwaggerConfig(InfoProperties infoProperties) {
+    this.infoProperties = infoProperties;
   }
   
   @Bean
@@ -31,9 +31,9 @@ public class SwaggerConfig {
   
   private ApiInfo apiInfo() {
     return new ApiInfoBuilder()
-      .title(properties.getTittle())
-      .description(properties.getDescription())
-      .version(properties.getVersion())
+      .title(infoProperties.getTittle())
+      .description(infoProperties.getDescription())
+      .version(infoProperties.getVersion())
       .build();
   }
   

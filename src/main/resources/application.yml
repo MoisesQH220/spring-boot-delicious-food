@@ -18,7 +18,7 @@ info:
   project:
     version: 1.0.0
     title: Spring Boot Delicious Food
-    description: Microservicio para consultar la información de clientes de Telefónica del Perú
+    description: Microservice to help “DeliciousFood” company to create their own online food delivery company available on mobile app and web.
 
 server:
   port: 8080

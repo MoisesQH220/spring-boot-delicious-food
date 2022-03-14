@@ -1,6 +1,6 @@
 package com.projects.config;
 
-import com.projects.config.exception.ErrorException;
+import com.projects.exception.ErrorException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -1,6 +1,4 @@
-package com.projects.config.exception;
-
-import com.fasterxml.jackson.annotation.JsonInclude;
+package com.projects.exception;
 
 public class ErrorException extends RuntimeException {
 
